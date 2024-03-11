@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import sun from "../images/ri_sun-line.png";
 import moon from "../images/ri_moon-line.png";
-import fourdotsPurple from "../images/Vector.png";
-import fourdots from "../images/ri_apps-2-line.png";
 
 export default function Navbar({ light, dark, setMode, mode }) {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   const health = document.getElementById("health");
   const routine = document.getElementById("routine");
   const follow = document.getElementById("follow");
@@ -28,7 +26,7 @@ export default function Navbar({ light, dark, setMode, mode }) {
                   : "text-[#D1C0F1]"
               } hover:scale-105`}
               onClick={() => {
-                switch (name) {
+                switch ({ name }) {
                   case "Health":
                     health?.scrollIntoView({
                       behavior: "smooth",
